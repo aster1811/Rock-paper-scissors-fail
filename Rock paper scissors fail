@@ -1,0 +1,118 @@
+program schere_stein_papier;
+uses crt;
+var  s,u,r,t,p,t,z,m:integer;
+var     x:string;
+
+begin
+
+randomize;
+
+
+r:=49;
+t:=chr(r);
+
+p:=50;
+q:=chr(p);
+
+s:=51;
+u:=chr(s);
+
+y:=randomize(u)+t;
+
+ 
+  write('rock, paper scissors???     ');
+textcolor(12);
+  readln(x);
+
+
+  rock:=1;
+  paper:=2;
+  scissors:=3;
+
+
+m:=0;
+c:=0;
+
+
+
+for z:=1 to 3 do
+begin
+
+if x=y then
+ begin
+  textcolor(7);
+  writeln('damn. i have the same thing :/');
+ end;
+
+
+
+  
+if x=rock and y=q then
+begin
+   textcolor(7);
+   write('computer chose ',y);
+   writeln('HA I WON');
+   c:=c+1;
+end;
+ 
+if x=rock and y=u then
+begin
+textcolor(7);
+writeln('computer chose ',y);
+ writeln('…you won bitch…');
+m:=m+1;
+end;
+
+
+
+
+if x=paper and y=t then
+ begin
+textcolor(7);
+  writeln('computer chose ',y);
+  writeln('…FUCK I LOST');
+ m:=m+1;
+ end;
+
+if x=paper and y=u then
+ begin
+textcolor(7);
+  writeln('computer chose ',y);
+  writeln('Aw damn u lost :/');
+ c:=c+1;
+ end;
+
+
+
+if x=scissors and y=t then
+begin
+textcolor(7);
+ writeln('computer chose ',y);
+ writeln('Ha you break');
+ writeln('…inside');
+c:=c+1;
+end;
+
+if x=scissors and y=q then
+begin
+textcolor(7);
+ writeln('computer chose ',y);
+ writeln('I loose. again.');
+m=m+1;
+end;
+
+
+end;
+
+if m>c then
+begin
+ writeln('you won! congrats!!!');
+end
+else
+  writeln('the computer won. try again?');
+end;
+
+
+readkey
+
+end.
